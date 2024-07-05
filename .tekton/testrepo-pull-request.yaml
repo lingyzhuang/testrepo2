@@ -15,10 +15,10 @@ metadata:
       ]
   creationTimestamp: null
   labels:
-    appstudio.openshift.io/application: test-component
-    appstudio.openshift.io/component: test-component
+    appstudio.openshift.io/application: test-component1
+    appstudio.openshift.io/component: test-component1
     pipelines.appstudio.openshift.io/type: build
-  generateName: test-component-on-pull-request-
+  generateName: test-component1-on-pull-request-
   namespace: user-ns2
 spec:
   params:
@@ -27,7 +27,7 @@ spec:
   - name: git-url
     value: '{{source_url}}'
   - name: output-image
-    value: registry-service.kind-registry/test-component:on-pr-{{revision}}
+    value: registry-service.kind-registry/test-component1:on-pr-{{revision}}
   - name: path-context
     value: .
   - name: revision
